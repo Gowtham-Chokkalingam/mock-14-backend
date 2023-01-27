@@ -19,6 +19,7 @@ const userRegister = async (req, res) => {
 const upadateUser = async (req, res) => {
   const { name, difficulty, score } = req.body;
   const user = await User.findById(req.params.id);
+  console.log('user:', user)
 
   try {
     if (user) {

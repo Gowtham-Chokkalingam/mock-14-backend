@@ -4,6 +4,6 @@ const {  userRegister, generateRandomWord, upadateUser } = require("../controlle
 const router = express.Router();
 //> User Route
 router.post("/register", userRegister);
-router.post("/register/:id", upadateUser);
+router.patch("/update/:id", upadateUser);
 router.get("/playzone/:id", generateRandomWord );
 module.exports = router;
